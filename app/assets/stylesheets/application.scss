@@ -14,37 +14,7 @@
  //*= require_self
  */
 
-// Custom bootstrap variables must be set or imported *before* bootstrap.
-@import "bootstrap";
-@import "font-awesome";
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
 
-
-.devise-wrapper{
-  @extend .mt-2;
-  @extend .card;
-  @extend .border-0;
-  @extend .mx-auto;
-  max-width: 500px;
-  h1{
-    @extend .bg-light;
-    @extend .text-center;
-    @extend .card-title;
-    @extend .card-header;
-    @extend .border;
-  }
-  form {
-    @extend .bg-light;
-    @extend .card-body;
-    @extend .border;
-
-    div:last-child {
-      @extend .row;
-      @extend .justify-content-center;
-    }
-  }
-  > div:last-child{
-    @extend .card-footer;
-    @extend .bg-white;
-    @extend .border-0;
-  }
-}
+@import 'custom';

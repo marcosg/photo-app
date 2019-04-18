@@ -7,7 +7,7 @@ ruby '2.6.2'
 gem 'rails', '~> 5.2.3'
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
-gem 'font-awesome-rails'
+gem 'font-awesome-sass'
 
 gem 'devise'
 gem 'devise-bootstrap-views', '~> 1.0'
