@@ -94,4 +94,9 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  #Stripe keys
+  config.stripe_publishable_key = Rails.application.credentials.stripe[:test_publishable_key]
+  config.stripe_secret_key = Rails.application.credentials.stripe[:test_secret_key]
+
 end

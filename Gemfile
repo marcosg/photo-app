@@ -11,6 +11,7 @@ gem 'font-awesome-sass'
 
 gem 'devise'
 gem 'devise-bootstrap-views', '~> 1.0'
+gem 'stripe'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'

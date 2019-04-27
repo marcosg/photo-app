@@ -30,3 +30,25 @@
     @extend .border-0;
   }
 }
+
+.plans{
+  @extend .row;
+  .plan{
+
+  }
+}
+
+.jumbotron {
+  text-align: center;
+  background-image: asset-url('landscape.jpg');
+  background-size: cover;
+  color: #fff;
+  font-family: 'Helvetica Neue' !important;
+  font-stretch: expanded;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-left: 15px;
+  margin-right: 15px;
+  text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
+
+}
