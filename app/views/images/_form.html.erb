@@ -1,0 +1,47 @@
+
+<%= form_with(model: image, local: true, html: { multipart: true, class: "col-md-4" }) do |form| %>
+  <% if image.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(image.errors.count, "error") %> prohibited this image from being saved:</h2>
+
+      <ul>
+      <% image.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+
+  <% if @image.picture? %>
+    <div class="form-group">
+      <%= form.label "Picture" %>
+      <%= image_tag(@image.picture.url, height:"300px") %>
+    </div>
+  <% end %>
+
+  <div class="form-group custom-file">
+    <%= form.label :picture, class: "custom-file-label" %>
+    <%= form.file_field :picture, accept: 'image/jpeg,image/png', class: "custom-file-input" %>
+  </div>
+
+
+  <div class="form-row my-3">
+    <%= form.submit %>
+  </div>
+<% end %>
+<script type="text/javascript">
+    var picInput = $('#image_picture')
+
+    picInput.on('change', function() {
+        let size_in_megabytes = this.files[0].size/1024/1024;
+        if (size_in_megabytes > 3) {
+            alert('Maximum file size is 3MB. This file is ' + Math.round(size_in_megabytes) + "MB.");
+        }
+        picInput.prev('.custom-file-label').html($obj.val());
+    });
+</script>
